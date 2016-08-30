@@ -96,10 +96,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="160" y2="0" width="0" layer="20"/>
-<wire x1="160" y1="0" x2="160" y2="100" width="0" layer="20"/>
-<wire x1="160" y1="100" x2="0" y2="100" width="0" layer="20"/>
-<wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="68.56" y2="0" width="0" layer="20"/>
+<wire x1="68.56" y1="0" x2="68.56" y2="53.391" width="0" layer="20"/>
+<wire x1="68.56" y1="53.391" x2="0" y2="53.391" width="0" layer="20"/>
+<wire x1="0" y1="53.391" x2="0" y2="0" width="0" layer="20"/>
 <text x="6.604" y="39.7891" size="1.778" layer="25">CLK</text>
 <text x="6.7691" y="42.2656" size="1.778" layer="25">IO</text>
 <text x="6.4389" y="44.7421" size="1.778" layer="25">VDD</text>
