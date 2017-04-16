@@ -14661,6 +14661,8 @@ Source: 008-0260-0_E.pdf</description>
 <part name="LED1_R1" library="resistor" deviceset="R-EU_" device="0204/7"/>
 <part name="BOOT-SW" library="pinhead" deviceset="PINHD-1X3" device=""/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="0204/5" value="5K"/>
+<part name="EXTPW-JP1" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="EXTPW-JP2" library="pinhead" deviceset="PINHD-1X3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14691,13 +14693,15 @@ Source: 008-0260-0_E.pdf</description>
 <instance part="IC2" gate="G$1" x="86.36" y="96.52"/>
 <instance part="D1" gate="G$1" x="50.8" y="10.16" rot="R180"/>
 <instance part="X1" gate="G$1" x="43.18" y="-27.94" rot="R270"/>
-<instance part="J1" gate="G$1" x="7.62" y="-20.32"/>
+<instance part="J1" gate="G$1" x="2.54" y="-33.02"/>
 <instance part="IC3" gate="G$1" x="25.4" y="-20.32"/>
 <instance part="Q1" gate="G$1" x="132.08" y="66.04" rot="R270"/>
 <instance part="LED3" gate="G$1" x="124.46" y="93.98"/>
 <instance part="LED1_R1" gate="G$1" x="119.38" y="88.9"/>
 <instance part="BOOT-SW" gate="A" x="119.38" y="33.02" rot="R90"/>
 <instance part="R1" gate="G$1" x="116.84" y="35.56"/>
+<instance part="EXTPW-JP1" gate="A" x="7.62" y="-20.32" rot="R90"/>
+<instance part="EXTPW-JP2" gate="A" x="0" y="78.74" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -15069,11 +15073,15 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="55.88" y1="-43.18" x2="33.02" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="-43.18" x2="-7.62" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-43.18" x2="-7.62" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="86.36" x2="38.1" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="86.36" x2="-2.54" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="86.36" x2="38.1" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="86.36" x2="38.1" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="O"/>
 <wire x1="33.02" y1="-17.78" x2="33.02" y2="-43.18" width="0.1524" layer="91"/>
 <junction x="33.02" y="-43.18"/>
+<pinref part="EXTPW-JP2" gate="A" pin="1"/>
+<wire x1="-2.54" y1="76.2" x2="-2.54" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-2.54" y="86.36"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -15126,6 +15134,10 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="121.92" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="30.48" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
 <junction x="129.54" y="43.18"/>
+<pinref part="EXTPW-JP2" gate="A" pin="3"/>
+<wire x1="2.54" y1="76.2" x2="12.7" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="73.66" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="73.66" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PA4" class="0">
@@ -15224,11 +15236,11 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="-20.32" x2="12.7" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-33.02" x2="7.62" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="GND"/>
-<wire x1="25.4" y1="-27.94" x2="12.7" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-27.94" x2="12.7" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="12.7" y="-22.86"/>
+<wire x1="25.4" y1="-27.94" x2="25.4" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-35.56" x2="7.62" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="7.62" y="-35.56"/>
 <pinref part="IC1" gate="G$1" pin="GND@3"/>
 <pinref part="IC1" gate="G$1" pin="GND@2"/>
 <wire x1="43.18" y1="10.16" x2="45.72" y2="10.16" width="0.1524" layer="91"/>
@@ -15247,17 +15259,20 @@ Source: 008-0260-0_E.pdf</description>
 <junction x="38.1" y="-22.86"/>
 </segment>
 </net>
-<net name="N$24" class="0">
+<net name="VIN@HIGH" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="I"/>
-<pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="17.78" y1="-17.78" x2="12.7" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="-17.78" x2="12.7" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-12.7" x2="-2.54" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="-12.7" x2="10.16" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-12.7" x2="-2.54" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-12.7" x2="-2.54" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="+VIN"/>
 <wire x1="-2.54" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="71.12" x2="48.26" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="EXTPW-JP1" gate="A" pin="3"/>
+<wire x1="10.16" y1="-22.86" x2="10.16" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="10.16" y="-12.7"/>
 </segment>
 </net>
 <net name="PF1@LED" class="0">
@@ -15289,12 +15304,29 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="LED1_R1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="BOOT@R" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="35.56" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="BOOT-SW" gate="A" pin="2"/>
 <wire x1="119.38" y1="33.02" x2="119.38" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<pinref part="EXTPW-JP1" gate="A" pin="2"/>
+<wire x1="7.62" y1="-30.48" x2="7.62" y2="-22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN@LOW" class="0">
+<segment>
+<pinref part="EXTPW-JP2" gate="A" pin="2"/>
+<wire x1="0" y1="76.2" x2="-5.08" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="71.12" x2="-5.08" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-15.24" x2="5.08" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="EXTPW-JP1" gate="A" pin="1"/>
+<wire x1="5.08" y1="-15.24" x2="5.08" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
