@@ -14970,6 +14970,11 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="22.86" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
 <junction x="88.9" y="68.58"/>
 <junction x="22.86" y="66.04"/>
+<pinref part="ENC28J60" gate="A" pin="9"/>
+<wire x1="35.56" y1="119.38" x2="7.62" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="119.38" x2="7.62" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="142.24" x2="99.06" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="142.24" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND@0" class="0">
