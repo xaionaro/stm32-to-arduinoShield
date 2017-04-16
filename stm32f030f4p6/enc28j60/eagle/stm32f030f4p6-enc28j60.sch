@@ -14835,7 +14835,7 @@ Source: 008-0260-0_E.pdf</description>
 <junction x="22.86" y="35.56"/>
 </segment>
 </net>
-<net name="PA5" class="0">
+<net name="PA5_SCK" class="0">
 <segment>
 <pinref part="STM32F030F4PX_R" gate="A" pin="19"/>
 <pinref part="STM32F030F4PX_R" gate="A" pin="20"/>
@@ -14856,7 +14856,7 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="33.02" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PA6" class="0">
+<net name="PA6_MISO" class="0">
 <segment>
 <pinref part="STM32F030F4PX_R" gate="A" pin="18"/>
 <pinref part="STM32F030F4PX_R" gate="A" pin="17"/>
@@ -14870,10 +14870,12 @@ Source: 008-0260-0_E.pdf</description>
 <junction x="144.78" y="33.02"/>
 <junction x="63.5" y="55.88"/>
 <junction x="137.16" y="33.02"/>
-<pinref part="ENC28J60" gate="A" pin="8"/>
-<wire x1="43.18" y1="121.92" x2="55.88" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="121.92" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="55.88" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="55.88" x2="17.78" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="55.88" x2="17.78" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="ENC28J60" gate="A" pin="5"/>
+<wire x1="38.1" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="91"/>
+<junction x="35.56" y="124.46"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -15213,15 +15215,8 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="33.02" y1="116.84" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PA7" class="0">
+<net name="PA7_MOSI" class="0">
 <segment>
-<pinref part="ENC28J60" gate="A" pin="5"/>
-<wire x1="38.1" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="124.46" x2="30.48" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="124.46" x2="30.48" y2="83.82" width="0.1524" layer="91"/>
-<junction x="35.56" y="124.46"/>
-<wire x1="30.48" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="83.82" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="STM32F030F4PX_R" gate="A" pin="15"/>
 <pinref part="STM32F030F4PX_R" gate="A" pin="16"/>
 <wire x1="137.16" y1="35.56" x2="144.78" y2="35.56" width="0.1524" layer="91"/>
@@ -15234,7 +15229,10 @@ Source: 008-0260-0_E.pdf</description>
 <junction x="144.78" y="35.56"/>
 <junction x="63.5" y="58.42"/>
 <junction x="137.16" y="35.56"/>
-<wire x1="35.56" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="ENC28J60" gate="A" pin="8"/>
+<wire x1="53.34" y1="58.42" x2="63.5" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="121.92" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="121.92" x2="53.34" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND_RAW" class="0">
